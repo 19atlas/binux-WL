@@ -21,9 +21,13 @@ $(x86_64_asm_object_files): build/x86_64/%.o : boot/%.asm
 	mkdir -p $(dir $@) && \
 	nasm -f elf64 $(patsubst build/x86_64/%.o, boot/%.asm, $@) -o $@
 
+.PHONY: help
+help:
+	@printf "clean: delete outs\nbuild: compile\nrun: open in qemu\nkernel files: $(x86_64_c_source_files)\nasm files: $(x86_64_asm_source_files)\n"
+
 .PHONY: clean
 clean:
-	rm -rvf build out
+	@rm -rvf build out
 
 .PHONY: build
 build: $(clean) $(kernel_object_files) $(x86_64_object_files)
