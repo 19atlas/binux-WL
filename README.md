@@ -1,5 +1,5 @@
-# Archived
-because I want to rewrite it all by myself, not copying base.
+# Archived fork
+i forked for simple file path.
 
 # binux-WL
 an OS but doesn't have the linux kernel B(

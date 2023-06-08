@@ -5,5 +5,5 @@
 
 char* input_character();
 char* input();
-//void print_raw_input();
+void init_keyboard();
 //static inline uint8_t _inb(uint16_t port);

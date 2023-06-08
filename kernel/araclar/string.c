@@ -1,5 +1,5 @@
 // source: https://gitlab.com/sortie/meaty-skeleton and https://wiki.osdev.org/Meaty_Skeleton
-#include "string.h"
+#include "../headerlar/string.h"
 
 int memcmp(const void* aptr, const void* bptr, size_t size) {
 	const unsigned char* a = (const unsigned char*) aptr;

@@ -1,12 +1,13 @@
-#include "print.h"
-#include "input.h"
-#include "sleep.h"
-#include "string.h"
+#include "../headerlar/print.h"
+#include "../headerlar/input.h"
+#include "../headerlar/sleep.h"
+#include "../headerlar/string.h"
+
 #define cmpin(in, comp) \
 	(strlen(in) == strlen(comp) && memcmp(in,comp,strlen(in)) == 0)
 
-void kernel_main() { // prinf bruh
-	//char* GSOD = "Your Computer has been got crashed while trying to make a Action."; // gri ekran ölümü; yo o green ekran ölümü ; ok
+void kernel_main() {
+	char* GSOD = "Your Computer has been got crashed while trying to make a Action.";
 	print_clear();
 	print_set_color(renk_beyaz, renk_siyah);
 	print_str("Welcome To ");
@@ -16,13 +17,6 @@ void kernel_main() { // prinf bruh
 	print_str("INUX");
 	print_set_color(renk_beyaz, renk_siyah);
 	print_str("!\n");
-
-	/*if (input() == "echo") {
-		print_str("Hello, World! Yea Boiiiiiiiiii");
-	} else {
-		return;
-	}*/
-
 
 	while (1) {
 		char* inputed_variable = input(">");
@@ -36,7 +30,4 @@ void kernel_main() { // prinf bruh
 		print_str("\n");
 	}
 
-	/*print_str("deneme");
-	clear(5);
-	print_str("123");*/
 }
